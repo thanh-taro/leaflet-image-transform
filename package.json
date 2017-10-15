@@ -1,0 +1,34 @@
+{
+  "name": "leaflet-image-transform",
+  "version": "0.0.1",
+  "description": "Scale/rotate/drag plugin for leaflet image overlay layers",
+  "keywords": [
+    "leaflet",
+    "image",
+    "transform",
+    "overlay",
+    "scale",
+    "resize",
+    "rotate",
+    "move",
+    "geometry",
+    "edit"
+  ],
+  "author": "Nguyen Tri Thanh <adamnguyen.itdn@gmail.com>",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "live-server --open=example --ignore=node_modules",
+    "lint": "eslint src/*.js",
+    "lint-fix": "eslint src/*.js --fix",
+    "build-src": "uglifyjs src/index.js --beautify -o dist/L.ImageOverlay.Transform.js",
+    "build-compress": "uglifyjs src/index.js --compress --mangle -o dist/L.ImageOverlay.Transform.min.js --source-map filename=L.ImageOverlay.Transform.min.js.map",
+    "build": "npm run build-src && npm run build-compress"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "live-server": "^1.2.0",
+    "uglify-js": "^3.1.3"
+  }
+}
